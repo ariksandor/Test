@@ -51,3 +51,15 @@
 
 
 # Ветвление с помощью условного оператора
+
+#Задача полиндром
+def checking_for_palindromes(slovo):
+   if slovo[::-1].lower() == slovo.lower():
+       return '\nМожно сделать палиндромом, сцука'
+   return '\nНельзя сделать палиндромом, сцука'
+slovo = str(input('Введите слово для проверки: '))
+print(checking_for_palindromes(slovo))
+
+
+
+
