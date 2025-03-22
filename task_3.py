@@ -5,7 +5,7 @@ def checking_ticket_number(num):
     list_num = []
     for i in num:
         list_num.append(int(i))
-    if sum(list_num[1:3]) == sum(list_num[4:6]):
+    if sum(list_num[0:2]) == sum(list_num[3:5]):
         return 'Yes'
     return'\nNo'
 num_1 = input('Введи номер билета:\t')
