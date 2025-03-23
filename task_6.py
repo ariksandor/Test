@@ -23,8 +23,8 @@ print('\nКоличество видеокарт: ',count_video_card,)
 for key, value in dict_video_cart.items():
     print(key, ': ', value)
 
+dict_video_cart = list(dict_video_cart.values())
+set_video_cart = set(dict_video_cart)
 
-
-
-
-
+print('Старый список видеокарт: ', dict_video_cart)
+print('Новый список видеокарт: ', list(set_video_cart))
