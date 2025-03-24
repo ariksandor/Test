@@ -1,4 +1,4 @@
-# from statistics import quantiles
+# Задача 8. Товары
 
 goods = {
 'Лампа': '12345',
@@ -25,17 +25,32 @@ store = {
 ],
 } #list_1 dict_2
 def print_cost_dicts(dict_1, dict_2):
-    #slovar = dict()
-    sum_1 = 0
-   # sum_2 = 0
     for key, value in dict_1.items():
         i = 0
+        sum_2 = 0
+        count = 0
         while i < len(dict_2[value]):
             slovar = dict_2[value][i]
             sum_1 = slovar['quantity'] * slovar['price']
-            #sum_2 = sum_1 + (slovar['quantity'] * slovar['price'])
+            sum_2 = sum_1 + sum_2
+            count = count + slovar['quantity']
             i += 1
-        print(sum_1)
-        #print(f'{key} - {dict_2[value][0]}')
-    #print(sum_1)
+        if str(sum_2)[-2:] in ('11', '12', '13', '14'):
+            rub = 'рублей'
+        elif str(sum_2)[-1] == '1':
+            rub = 'рубль'
+        elif str(sum_2)[-1] in ('2', '3', '4'):
+            rub = 'рубля'
+        else:
+            rub = 'рублей'
+
+        if str(count)[-2:] in ('11', '12', '13', '14'):
+            numb = 'штук'
+        elif str(count)[-1] == '1':
+            numb = 'штука'
+        elif  str(count)[-1] in ('2', '3', '4'):
+            numb = 'штуки'
+        else:
+            numb = 'штук'
+        print(f'{key} - {count} {numb}, стоимость {sum_2} {rub}')
 print_cost_dicts(goods, store)
