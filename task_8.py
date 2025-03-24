@@ -27,15 +27,15 @@ store = {
 def print_cost_dicts(dict_1, dict_2):
     #slovar = dict()
     sum_1 = 0
-    sum_2 = 0
+   # sum_2 = 0
     for key, value in dict_1.items():
         i = 0
         while i < len(dict_2[value]):
             slovar = dict_2[value][i]
             sum_1 = slovar['quantity'] * slovar['price']
-            sum_2 = sum_1 + (slovar['quantity'] * slovar['price'])
+            #sum_2 = sum_1 + (slovar['quantity'] * slovar['price'])
             i += 1
-        print(sum_2)
+        print(sum_1)
         #print(f'{key} - {dict_2[value][0]}')
     #print(sum_1)
 print_cost_dicts(goods, store)
