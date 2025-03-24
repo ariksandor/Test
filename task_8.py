@@ -1,3 +1,5 @@
+from statistics import quantiles
+
 goods = {
 'Лампа': '12345',
 'Стол': '23456',
@@ -23,6 +25,10 @@ store = {
 ],
 } #list_1 dict_2
 def print_cost_dicts(dict_1, dict_2):
+    slovar = dict()
     for key, value in dict_1.items():
-        print(f'{key} - {dict_2[value][0]}')
+        slovar = dict_2[value][0]
+        sum_1 = slovar['quantity'] * slovar['price']
+        #print(f'{key} - {dict_2[value][0]}')
+        print(sum_1)
 print_cost_dicts(goods, store)
