@@ -7,15 +7,17 @@ while type(ad_count_films) != int:
         ad_count_films = input('Введите (корректное количество) сколько фильмов хотите добавить: ')
 
 i = 0
-list_lowe_films = list()
-lowe_film = ''
+list_love_films = list()
+love_film = str() # Только для понимания инициализировал пустую переменную строчного типа
+low_films = [s.lower() for s in films]
 while i < ad_count_films:
-    lowe_film = input('Введите название фильма: ')
-    for film in films:
-        if lowe_film == film:
-            list_lowe_films.append(lowe_film)
+    love_film = input('Введите название фильма: ')
+    if low_films.count(love_film.lower()) > 0:
+        love_film = love_film[0].upper() + love_film[1:len(love_film) + 1].lower()
+        list_love_films.append(love_film)
+        i += 1
+    else:
+        print(f'Ошибка: фильма {love_film} нет :(')
 
-    #lowe_film = input(f'Ошибка: фильма {lowe_film} нет :(\nВведите название фильма: ')
-    i += 1
-
-print(list_lowe_films)
+del low_films
+print('Ваш список любимых фильмов:\t', list_love_films)
