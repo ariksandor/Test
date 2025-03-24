@@ -27,19 +27,19 @@ store = {
 def print_cost_dicts(dict_1, dict_2):
     for key, value in dict_1.items():
         i = 0
-        sum_2 = 0
+        sum_1 = 0
         count = 0
         while i < len(dict_2[value]):
             slovar = dict_2[value][i]
-            sum_1 = slovar['quantity'] * slovar['price']
-            sum_2 = sum_1 + sum_2
+            multyply = slovar['quantity'] * slovar['price']
+            sum_1 = multyply + sum_1
             count = count + slovar['quantity']
             i += 1
-        if str(sum_2)[-2:] in ('11', '12', '13', '14'):
+        if str(sum_1)[-2:] in ('11', '12', '13', '14'):
             rub = 'рублей'
-        elif str(sum_2)[-1] == '1':
+        elif str(sum_1)[-1] == '1':
             rub = 'рубль'
-        elif str(sum_2)[-1] in ('2', '3', '4'):
+        elif str(sum_1)[-1] in ('2', '3', '4'):
             rub = 'рубля'
         else:
             rub = 'рублей'
@@ -52,5 +52,5 @@ def print_cost_dicts(dict_1, dict_2):
             numb = 'штуки'
         else:
             numb = 'штук'
-        print(f'{key} - {count} {numb}, стоимость {sum_2} {rub}')
+        print(f'{key} - {count} {numb}, стоимость {sum_1} {rub}')
 print_cost_dicts(goods, store)
