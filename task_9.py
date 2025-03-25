@@ -10,24 +10,25 @@ def input_correct_number(print_input, print_input_cor): # функция Вво�
         except ValueError:
             num_1 = input(f'{print_input_cor}\t')
     return num_1
-number_of_orders = input_correct_number('Введите количество заказов:', 'Введите КОРРЕКТНОЕ количество заказов:') # Количество заказов
 
-#dictionary_of_orders = dict() # Словарь заказов
+'''def alphabetical_display_of_orders(dict_1:dict):
+    dict_2 = dict()
+    dict_3 = dict()
+    summa = 0
+    print()#i = list(dict_1.keys())[0]
+    for key, value in dict_1.items():
+        print(value)
+            #for key, value in dict_2.items():
+                #dict_3 = value
 
-#buyer = input('Введите Фамилию покупателя:\t') # покупатель
-
-#pizza = input('Введите название пиццы:\t') # Название пиццы
-
-#amount_of_pizza = input_correct_number('Введите количество выбранной пиццы:', 'Введите КОРРЕКТНОЕ количество заказов:') # Количество пиццы
+   # print(dict_2)'''
 
 def create_an_order_dictionary(num): # Функция создания словаря с заказами
     i = 1
     dict_1 = dict()
-    dict_2 = dict()
-    dict_3 = dict()
     while i <= num:
-        dict_3.clear()
-        dict_2.clear()
+        dict_3 = {}
+        dict_2 = {}
         numeral = str(conversion_number_into_numeral(i))
         print(f'{numeral[0].upper()}{numeral[1:len(numeral) + 1]} заказ: ')
         buyer = input('Фамилия покупателя:\t')  # покупатель
@@ -39,4 +40,7 @@ def create_an_order_dictionary(num): # Функция создания слов�
         dict_1[i] = dict_2
         i += 1
     return dict_1
+number_of_orders = input_correct_number('Введите количество заказов:', 'Введите КОРРЕКТНОЕ количество заказов:') # Количество заказов
 dictionary_of_orders = create_an_order_dictionary(number_of_orders)
+print(dictionary_of_orders)
+#create_an_order_dictionary(number_of_orders)
