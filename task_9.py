@@ -28,8 +28,8 @@ def create_an_order_dictionary(num): # Функция создания слов�
     while i <= num:
         dict_3.clear()
         dict_2.clear()
-        numeral_1 = str(conversion_number_into_numeral(i))
-        print(f'{numeral_1[0].upper()}{numeral_1[1:len(numeral_1)+1]} заказ: ')
+        numeral = str(conversion_number_into_numeral(i))
+        print(f'{numeral[0].upper()}{numeral[1:len(numeral) + 1]} заказ: ')
         buyer = input('Фамилия покупателя:\t')  # покупатель
         pizza = input('Введите название пиццы:\t')
         amount_of_pizza = input_correct_number('Введите количество выбранной пиццы:','Введите КОРРЕКТНОЕ количество заказов:')  # Количество пиццы
