@@ -1,10 +1,9 @@
 dict_1 = {
-    1 : {'Иванов' : {'pizza' : 'Мексиканская',
-                     'count' : 22}},
-    2 : {'Петров' : {'pizza' : 'Деревенская',
-                     'count' : 22}}
+    'пванов' : 'и',
+    'иетров' : 'а'
 }
+sorted_dict = dict(sorted(dict_1.items(), key=lambda item: item[1]))
 print(list(dict_1.keys())[0])
-print(dict_1)
+print(sorted_dict)
 
 
