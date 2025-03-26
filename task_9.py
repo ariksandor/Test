@@ -8,6 +8,8 @@ def input_correct_number(print_input, print_input_cor): # функция Вво�
     while type(num_1) != int:
         try:
             num_1 = int(num_1)
+            if num_1 <= 0:
+                raise ValueError
         except ValueError:
             num_1 = input(f'{print_input_cor}\t')
     return num_1
